@@ -149,8 +149,8 @@ local function run(msg, matches)
                 end
             end
         end
-            elseif matches[1] == 'add' then
-        if permissions(msg.from.id, msg.to.id, "add") then
+            elseif matches[1] == 'inv' then
+        if permissions(msg.from.id, msg.to.id, "inv") then
             local chat_id = msg.to.id
             local chat_type = msg.to.type
             if msg.reply_id then
@@ -184,15 +184,15 @@ end
 end
 return {
     patterns = {
-        '^#(setname) (.*)$',
-        '^#(link)$',
-        '^#(newlink)$',
-        '^#(tosuper)$',
-        '^#(setdes) (.*)$',
-        "^#(rmv)$",
-        "^#(rmv) (.*)$",
-        "^#(add)$",
-        "^#(add) (.*)$",
+        '^([Ss]etname) (.*)$',
+        --'^#(link)$',
+        --'^#(newlink)$',
+        --'^#(tosuper)$',
+        --'^#(setdes) (.*)$',
+        "^([Rr]mv)$",
+        "^([Rr]mv) (.*)$",
+        "^([Ii]nv$",
+        "^([Ii]nv) (.*)$",
     },
     run = run
 }
