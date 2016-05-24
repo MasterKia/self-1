@@ -129,7 +129,7 @@ local function run(msg, matches)
 	to_id = msg.to.id
   -- Show the available plugins
   if permissions(msg.from.id, msg.to.id, "plugins") then
-    if matches[1] == '#plugins' then
+    if matches[1] == 'plugins' then
       return list_plugins()
     end
 
@@ -173,12 +173,12 @@ end
 
 return {
   patterns = {
-    "^#plugins$",
-    "^#plugins? (enable) ([%w_%.%-]+)$",
-    "^#plugins? (disable) ([%w_%.%-]+)$",
-    "^#plugins? (enable) ([%w_%.%-]+) (gp)",
-    "^#plugins? (disable) ([%w_%.%-]+) (gp)",
-    "^#plugins? (reload)$" },
+    "^[Pp]lugins$",
+    "^[Pp]lugins? (enable) ([%w_%.%-]+)$",
+    "^[Pp]lugins? (disable) ([%w_%.%-]+)$",
+    "^[Pp]lugins? (enable) ([%w_%.%-]+) (gp)",
+    "^[Pp]lugins? (disable) ([%w_%.%-]+) (gp)",
+    "^[Pp]lugins? (reload)$" },
   run = run
 }
 
