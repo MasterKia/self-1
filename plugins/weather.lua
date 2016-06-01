@@ -42,7 +42,7 @@ end
 return {
 
   patterns = {
-   "^#weather (.*)$",
+   "^[Ww]eather (.*)$",
     },
   run = run
 }
