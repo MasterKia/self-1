@@ -1,10 +1,6 @@
 local function run(msg)
 
-if msg.text == "Torento" then
- return "؟>"
-end
-
-if msg.text == "@MrTorento" then
+if msg.text == "سید" or msg.text =="Seyed" or msg.text =="seyed" or msg.text =="@SeyedKia" then
  return "؟>"
 end
 
@@ -14,8 +10,10 @@ return {
  description = "Chat With Robot Server", 
  usage = "chat with robot",
  patterns = {
-  "^@MrTorento$",
-  "^Torento$",
+  "^@SeyedKia$",
+  "^Seyed$",
+  "^seyed$",
+  "^سید$",
   }, 
  run = run,
     --privileged = true,
